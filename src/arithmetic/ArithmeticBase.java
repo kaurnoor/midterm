@@ -16,12 +16,15 @@ import java.util.Scanner;
 public class ArithmeticBase 
 {
  public double x,y;
-    double calculate(double x, double y) 
+ // we can declare these variables as private and can use getter and setter methods to acquire encapsulation
+    double calculate(double x, double y) // this method should be public
         {
-        Scanner sc =new Scanner(System.in);
+        //Scanner sc =new Scanner(System.in);
         System.out.println("enter String");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+        //String s= sc.next();
+        public enum Operation {PLUS, MINUS, TIMES, DIVIDE};
+        private Operation s;
+        switch (s.value) 
         {
             case "PLUS":
                 return x + y;
